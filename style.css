@@ -1,0 +1,61 @@
+body {
+	font-family: 'Neuton', serif;
+	font-size: 18px;
+	font-weight: 300;
+	width: 100%;
+	line-height: 1.4;
+	color: #141414;
+	letter-spacing: 0.2px;
+	background-color: #191919;
+	cursor: none;
+  margin: 0;
+}
+* {
+  box-sizing: border-box;
+}
+
+.theBall, .theBall-outer {
+	mix-blend-mode: exclusion;
+	width: 100px;
+	height: 100px;
+}
+.theBall-outer {
+	position: fixed;
+	top: -100px;
+	left: -100px;
+	z-index: 5000;
+	pointer-events: none!important;
+}
+.theBall {
+	position: absolute;
+	background-color: pink;
+	border-radius: 50%;
+	-webkit-transition:  transform .2s cubic-bezier(.175,.885,.32,1.275);
+	-moz-transition:  transform .2s cubic-bezier(.175,.885,.32,1.275);
+	-ms-transition:  transform .2s cubic-bezier(.175,.885,.32,1.275);
+	-o-transition:  transform .2s cubic-bezier(.175,.885,.32,1.275);
+	transition:  transform .2s cubic-bezier(.175,.885,.32,1.275);
+	transform-origin: center center;
+}
+.dark_page .theBall,
+.coloring .theBall {
+	background-color: blue;
+}
+/* .zooming.theBall {
+	-webkit-transform: scale(2);
+	-moz-transform: scale(2);
+	-ms-transform: scale(2);
+	-o-transform: scale(2);
+	transform: scale(2);
+} */
+::selection {
+    background-color: green;
+    color: #fff;
+}
+
+a.test {
+  font-size: 5rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: white;
+}
